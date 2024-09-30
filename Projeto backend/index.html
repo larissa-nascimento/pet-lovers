@@ -9,51 +9,64 @@
 </head>
 <body>
 
-    <!--INICIO BANNER PET LOVERS-->
-    <div class="banner">
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" class="logo">
+            </a>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="cachorro.html">Cachorros</a>
+            </li>
+            <li>
+                <a href="gato.html">Gatos</a>
+            </li>
+            <li>
+                <a href="animais.html">Outros Pets</a>
+            </li>
+            <li>
+                <a href="conta.html">Minha Conta</a>
+            </li>
+        </div>
+        </ul>
+    </nav>
+    </header>
 
-        <!--INCIO CONTAINER PET LOVERS-->
-            <div class="container">
+    <section class="banner">
+        <h2>Encontre os melhores produtos para seu pet</h2>
+        <p>De ração a brinquedos, tudo o que seu animal precisa!</p>
+    </section>
 
-                <!--INICIO NAVEGAÇÃO TOPO-->
-                <div class="navbar">
-
-                    <header>
-                        <div class="center">
-                            <img src="img/sacola.png" alt="Sacola de compras" width="50px" height="50px"> 
-                        </div>
-                    </header>
-                    
-                    <div class="logo">
-                        <img src="img/logo.png" alt="Pet Lovers"  width="200px">
-                    </div>
-
-                    <!--INCIO MENU DE NAVEGAÇÃO-->
-                      <nav>
-                            <ul id="MenuItens">
-                                <li><a href="index.html" title="Home">Home</a></li>
-                                <li><a href="cachorro.html" title="Cachorros">Cachorros</a></li>
-                                <li><a href="gato.html" title="Gatos">Gatos</a></li>
-                                <li><a href="animais.html" title="Animais">Outros Pets</a></li>
-                                <li><a href="conta.html" title="Minha conta">Minha conta</a></li>
-                            </ul>
-                        </nav>
-                    <!--FIM MENU NAVEGAÇÃO-->
-
-                     <img src="img/banner.png" alt="Pets Lovers"> 
-
-                </div>
-                <!--FIM NAVEGAÇÃO TOPO-->
-
+    <section id="products">
+        <h2>Produtos em Destaque</h2>
+        <div class="product-grid">
+            <!-- Produto 1 -->
+            <div class="product-item">
+                <img src="img/racao_cachorro.webp" alt="Ração para Cães">
+                <h3>Ração para Cães</h3>
+                <p>R$ 100,00</p>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
             </div>
-         <!--FIM CONTAINNER PET LOVERS-->
-
-    </div>
-    <!--FIM BANNER PET LOVERS-->
-
-    
-
+            <!-- Produto 2 -->
+            <div class="product-item">
+                <img src="img/brinquedo_gato.webp" alt="Brinquedo para Gatos">
+                <h3>Brinquedo para Gatos</h3>
+                <p>R$ 60,00</p>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Produto 3 -->
+            <div class="product-item">
+                <img src="img/cama_animais.webp" alt="Caminha para Cachorros">
+                <h3>Caminha para Cachorros</h3>
+                <p>R$ 80,00</p>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
     <script src="js/index.js"></script>
-
 </body>
 </html>
