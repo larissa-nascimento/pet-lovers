@@ -67,14 +67,16 @@ nav ul li a:hover {
 .product-item {
     background-color: white;
     padding: 20px;
-    border: 1px solid #ddd;
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
+
+    border:2px solid black;
+    border-radius: 3%;
 }
 
 .product-item img {
-    max-width: 100%;
+    max-width: 100px;
     height: auto;
 }
 
@@ -101,4 +103,47 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+
+/*CARROSEL XERECA*/
+
+.carrossel {
+    
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+
+.imagens {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagens img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1; /* Adicionando z-index para que os botões fiquem acima das imagens */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }

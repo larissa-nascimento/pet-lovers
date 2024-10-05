@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <div class="container">
+        <div class="header-container">
             <a href="index.html">
                 <img src="img/logo.png" alt="logo" class="logo">
             </a>
@@ -36,11 +36,16 @@
     </nav>
     </header>
 
-    <section class="banner">
-        <h2>Encontre os melhores produtos para seu pet</h2>
-        <p>De ração a brinquedos, tudo o que seu animal precisa!</p>
-    </section>
-
+    <div class="carrossel">
+        <div class="imagens">
+            <img src="https://via.placeholder.com/600x300?text=Imagem+1" alt="Imagem 1">
+            <img src="https://via.placeholder.com/600x300?text=Imagem+2" alt="Imagem 2">
+            <img src="https://via.placeholder.com/600x300?text=Imagem+3" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
+        <button class="next" onclick="mudarImagem(1)">&#10095;</button>
+    </div>
+    
     <section id="products">
         <h2>Produtos em Destaque</h2>
         <div class="product-grid">
@@ -49,23 +54,26 @@
                 <img src="img/racao_cachorro.webp" alt="Ração para Cães">
                 <h3>Ração para Cães</h3>
                 <p>R$ 100,00</p>
-                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                
             </div>
             <!-- Produto 2 -->
             <div class="product-item">
                 <img src="img/brinquedo_gato.webp" alt="Brinquedo para Gatos">
                 <h3>Brinquedo para Gatos</h3>
                 <p>R$ 60,00</p>
-                <button class="btn-add-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Produto 3 -->
             <div class="product-item">
                 <img src="img/cama_animais.webp" alt="Caminha para Cachorros">
                 <h3>Caminha para Cachorros</h3>
                 <p>R$ 80,00</p>
-                <button class="btn-add-cart">Adicionar ao Carrinho</button>
             </div>
         </div>
+    </section>
+
+    <section class="banner">
+        <h2>Encontre os melhores produtos para seu pet</h2>
+        <p>De ração a brinquedos, tudo o que seu animal precisa!</p>
     </section>
     <script src="js/index.js"></script>
 </body>
