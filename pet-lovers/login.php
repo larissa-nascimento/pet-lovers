@@ -14,7 +14,7 @@
             <input type="text" id="login" name="login" placeholder="Digite seu login" required>
             <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
             <button type="submit">Entrar</button>
-            <p>Não tem uma conta? <a href="cadastro.php">Criar Conta</a></p>
+            <p>Não tem uma conta? <a href="cadastro.html">Criar Conta</a></p>
         </form>
     </div>
 </body>
