@@ -66,6 +66,20 @@
             margin-top: 20px;
         }
     </style>
+       <?php
+// Conexão com o banco de dados
+$servername = "localhost"; // ou o endereço do seu servidor
+$username = "root";
+$password = "";
+$dbname = "mg";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificando a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+?>
     <script>
         // Função para buscar o endereço pelo CEP
         function buscarEndereco() {
