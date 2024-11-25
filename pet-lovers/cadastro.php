@@ -80,23 +80,6 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-CREATE TABLE cadastros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(200),
-    data_nascimento DATE,
-    sexo VARCHAR(10),
-    nome_materno VARCHAR(200),
-    cpf VARCHAR(14),
-    email VARCHAR(200),
-    celular VARCHAR(15),
-    telefone_fixo VARCHAR(15),
-    cep VARCHAR(10),
-    endereco VARCHAR(200),
-    complemento VARCHAR(200),
-    login VARCHAR(200),
-    senha VARCHAR(200)
-);
-
 // Processando o formulário de cadastro
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebendo os dados do formulário
