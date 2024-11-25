@@ -127,8 +127,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Fechando a conexão
 $conn->close();
-
-<form method="POST" action="seu_arquivo_php.php" onsubmit="return validarFormulario()">
 ?>
     <script>
         // Função para buscar o endereço pelo CEP
@@ -232,8 +230,7 @@ $conn->close();
 <body>
     <div class="form-container">
         <h2>Cadastro do Usuário</h2>
-
-        <form onsubmit="return validarFormulario()">
+        <form method="POST" action="processar_cadastro.php" onsubmit="return validarFormulario()">
             <!-- Nome completo -->
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
