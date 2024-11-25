@@ -79,6 +79,56 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
+
+CREATE TABLE cadastros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(200),
+    data_nascimento DATE,
+    sexo VARCHAR(10),
+    nome_materno VARCHAR(200),
+    cpf VARCHAR(14),
+    email VARCHAR(200),
+    celular VARCHAR(15),
+    telefone_fixo VARCHAR(15),
+    cep VARCHAR(10),
+    endereco VARCHAR(200),
+    complemento VARCHAR(200),
+    login VARCHAR(200),
+    senha VARCHAR(200)
+);
+
+// Processando o formulário de cadastro
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recebendo os dados do formulário
+    $nome = $_POST['nome'];
+    $data_nascimento = $_POST['data_nascimento'];
+    $sexo = $_POST['sexo'];
+    $nome_materno = $_POST['nome_materno'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    $celular = $_POST['celular'];
+    $telefone_fixo = $_POST['telefone_fixo'];
+    $cep = $_POST['cep'];
+    $endereco = $_POST['endereco'];
+    $complemento = $_POST['complemento'];
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+
+    // Inserindo os dados na tabela 'cadastros'
+    $sql = "INSERT INTO cadastros (nome, data_nascimento, sexo, nome_materno, cpf, email, celular, telefone_fixo, cep, endereco, complemento, login, senha) 
+            VALUES ('$nome', '$data_nascimento', '$sexo', '$nome_materno', '$cpf', '$email', '$celular', '$telefone_fixo', '$cep', '$endereco', '$complemento', '$login', '$senha')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Cadastro realizado com sucesso!";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Fechando a conexão
+$conn->close();
+
+<form method="POST" action="seu_arquivo_php.php" onsubmit="return validarFormulario()">
 ?>
     <script>
         // Função para buscar o endereço pelo CEP
