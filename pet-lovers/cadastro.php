@@ -230,7 +230,7 @@ $conn->close();
 <body>
     <div class="form-container">
         <h2>Cadastro do Usuário</h2>
-        <form method="POST" action="processar_cadastro.php" onsubmit="return validarFormulario()">
+        <form method="POST" onsubmit="return validarFormulario()">
             <!-- Nome completo -->
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
